@@ -1,0 +1,750 @@
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, 
+*:after,
+*:before{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+/* container ***********/
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+/* header ***********/
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    
+    
+}
+
+.header.fixed{
+    position: fixed;
+    background-color: #00117d;
+    height: auto;
+    
+}
+
+
+.header.fixed .header__inner{
+    padding: 15px 0;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    
+    padding:35px 0;
+    border-bottom:1px solid #515369;
+    align-items: center;
+    
+}
+
+.header__logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+   
+}
+
+
+/* nav ***********/
+
+.nav{
+    
+    display: flex;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+.nav__link{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px;
+    opacity: 0.75;
+    
+    
+    transition: opacity .1s linear;
+}
+
+
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link:hover{
+    opacity: 1;
+}
+
+
+
+/* intro ***********/
+
+.intro{
+    background: url("Images/bg.jpeg")
+    center no-repeat;
+    background-color: #3a3e64;
+    background-size: cover;
+    
+    height: 750px;
+    padding-top: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.intro__inner{
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.title{
+    font-size: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.subtitle{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 50px 0 80px;
+    line-height: 1.5;
+}
+
+.btn{
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 15px 55px;
+    transition: background-color .1s linear;
+    cursor: pointer;
+    border: 0;
+    
+}
+
+.btn--red{
+    background-color: #e84545;  
+}
+
+.btn--long{
+ min-width: 280px;
+}
+
+.btn--red:hover{
+    background-color: #b91313;
+}
+
+
+
+/* Skills ***********/
+
+.skills{
+    margin: 120px 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.skills__icon{
+    color:#e84545;
+    background-color:#e84545 ;
+}
+
+
+
+
+
+
+.skills__item{
+    width: 33.333%;
+    text-align: center;
+    padding: 0 40px;
+    margin: 25px 0;
+}
+
+
+.skills__title{
+    padding: 35px 0 25px;
+    color: #2d3033;
+    font-weight: 700;
+}
+
+.skills__text{
+    color: #6c7279;
+}
+
+/* Works */
+
+.works{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.works__item{
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    cursor: pointer;
+}
+
+
+.works__item:hover .works__info{
+    opacity: 1;
+}
+
+
+.works__info{
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    transition: opacity .2s linear;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 69, 69, .9);
+}
+
+.works__icon{
+    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform:translate3d(-50%,-50%,0)
+}
+
+.works__name{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.works__prof{
+    color: #fff;
+    font-size: 14px;
+    
+}
+
+
+
+/* Team****************************/
+
+.team{
+    margin: 100px 0 100px;
+}
+
+
+
+
+.team__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+
+.team__item{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__photo{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team__name{
+    font-size: 22px;
+    color: #2d3033;
+    
+    margin-bottom: 8px;
+}
+
+.team__prof{
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #e84545;
+    
+    text-transform: uppercase;
+}
+
+.team__text{
+    color:#6c7279;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.team__seti{
+    display: flex;
+    
+}
+
+
+.team__social{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40px;
+    border: 1px solid #e8ecee;
+    margin-right: 5px;
+    transition: background .1s linear;
+}
+
+
+.team__social:hover{
+    background-color:#e8ecee ;
+}
+
+.social__icon{
+    fill:#c6cacc;
+    height: 18px;
+    display: block;
+    transition: fill .1s linear;
+}
+
+.team__social:hover .social__icon{
+    fill:#333;
+}
+
+
+/**********Reviews****************************/
+
+
+.reviews{
+    background-color: #53354a;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+
+
+
+.reviews__item{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+}
+
+.reviews__photo{
+    width: 50%;
+    position: relative;
+    height: 500px;
+}
+
+.reviews__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    justify-content: center;
+}
+
+
+.reviews__img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    
+    transform:translateY(-50%);
+}
+
+
+
+.reviews__text{
+    font-style: italic;
+    font-size: 24px;
+    color:#fff;
+    margin-bottom: 30px;
+}
+
+.reviews__author{
+    color: #fff;
+    font-size:14px;
+    text-transform: uppercase;
+}
+
+.slick-dots{
+    
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color:transparent;
+    font-size: 0;
+}
+
+.slick-dots button{
+    color: transparent;
+    font-size: 0;
+    border-radius: 50%;
+    padding: 5px 5px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    opacity: .5;
+}
+
+.slick-dots button:focus{
+    outline: none;
+}
+
+.slick-active button{
+    opacity: 1;
+}
+
+
+/************************************************ Download*/
+
+
+.download{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.download__title{
+    font-weight: 300;
+    color:#3b3e41;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.download__suptitle{
+    color: #2d3033;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/************************************************ Footer*/
+
+
+.footer{
+    background-color: #3a3e64;
+}
+
+
+
+
+.footer__inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+    
+}
+
+
+.footer__item{
+    width: 33.3333%;
+    text-align: center;
+    padding: 0 15px;
+    
+}
+
+
+.footer__title{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.footer__text{
+    color: rgba(255, 255, 255, .5);
+    line-height: 1.5;
+    
+}
+
+.footer--seti{
+    
+    justify-content: center;
+}
+
+.footer--seti .team__social{
+    background: transparent;
+    border: 3px #fff solid;
+    
+}
+
+.footer--seti .social__icon{
+    fill: #fff;
+}
+
+.footer--seti .team__social:hover{
+    background-color: #fff;
+}
+
+
+.footer__bot{
+    background-color: #313454;
+    text-align: center;
+}
+
+.bot{
+    line-height: 1.5;
+    padding: 30px 0;
+}
+
+.bot span{
+    color: #fff;
+}
+
+.burger{
+    display: none;
+    border: none;
+    background: none;
+}
+
+.burger__item{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    font-size: 0;
+    color:transparent;
+    position: relative;
+    
+    cursor: pointer;
+}
+
+.burger__item::after,
+.burger__item::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item::after{
+    top:-8px;
+}
+
+.burger__item::before{
+    bottom: -8px;
+}
+
+
+/*********************Media*/
+
+@media(max-width:991px){
+
+    .works__item{
+        width: 50%;
+    }
+}
+
+@media(max-width:991px){
+
+    /*Nan*/
+   
+    .nav{
+    display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      flex-direction: column;
+      width: 100%;
+      text-align: right;
+      background-color:#00117d ;
+    }
+    
+    .nav__link{
+        padding: 9px 15px;
+    }
+
+    .nav.show{
+        display: flex;
+    }
+  
+    /*Burger*/
+   .burger{
+    display: block;
+   }
+   
+    /*intro*/
+    .title{
+        font-size: 40px;
+    }
+
+
+    .skills__item{
+        width: 50%;
+    }
+
+    .team__item{
+        width: 50%;
+        text-align: center;
+    }
+
+    .team__photo{
+        margin: 0 auto;
+    }
+
+    .team__seti{
+        justify-content: center;
+    }
+
+    .reviews__photo{
+        width: 100%;
+        overflow: hidden;
+        margin: 15px 0;
+        
+    }
+    .reviews__content{
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+    .reviews__img{
+        min-width: 100%;
+       
+    }
+}
+
+
+@media(max-width:767px){
+
+    .intro{
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .subtitle{
+        font-size: 14px;
+    }
+
+    .skills__item{
+        width: 100%;
+    }
+
+    .works__item{
+        width: 100%;
+    }
+
+    .works__item{
+        height: 250px;
+    }
+
+    .team__item{
+        width: 100%;
+    }
+    .reviews__text{
+        font-size: 18px;
+    }
+    .reviews__author{
+        font-size: 12px;
+    }
+
+
+    .reviews__img{
+        right: -100px;
+    }
+    .btn--long{
+        min-width: 260px;
+    }
+
+    .download{
+        margin: 50px 0;
+    }
+
+    .download__title{
+        font-size: 20px;
+    }
+
+    .reviews{
+        margin-bottom: 50px;
+    }
+
+
+    .footer__item{
+        width: 100%;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer__item:last-child{
+        margin-bottom: 0;
+    }
+
+    .footer__inner{
+        padding: 30px 0;
+    }
+}
